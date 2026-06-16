@@ -287,7 +287,7 @@
     function openModal(planId) {
         const data = planData[planId];
         document.getElementById('modalTitle').innerText = data.title;
-        document.getElementById('modalBadge').innerText = data.badge;
+        document.getElementById('modalBadge').innerHTML = data.badge;
         document.getElementById('modalBody').innerHTML = data.body;
         modal.style.display = 'flex';
     }
