@@ -104,6 +104,31 @@
         .glass-card::before {
             content: ""; position: absolute; top: 0; right: 0; width: 50px; height: 50px;
             background: var(--primary); filter: blur(50px); opacity: 0.5;
+        /* استایل اختصاصی دکمه‌های پیام‌رسان */
+.btn-eitaa {
+    background: #f38121; /* رنگ سازمانی ایتا */
+    color: #fff !important;
+}
+.btn-eitaa:hover {
+    background: #d96f1a;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(243, 129, 33, 0.3);
+}
+
+.btn-bale {
+    background: linear-gradient(135deg, #2cb5a0, #3c65a3); /* گرادینت مشابه لوگوی بله */
+    color: #fff !important;
+}
+.btn-bale:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(44, 181, 160, 0.3);
+}
+
+.messenger-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
         }
 
         .card-icon { font-size: 2.5em; margin-bottom: 15px; }
@@ -155,8 +180,21 @@
         
         <div class="action-buttons">
             <a href="https://bmn.ir/" target="_blank" class="btn btn-main">🌐 وب‌سایت رسمی بنیاد</a>
-            <a href="https://sina.bmn.ir/" target="_blank" class="btn btn-outline">📝 سامانه ثبت‌نام سینا</a>
-        </div>
+           <a href="https://sina.bmn.ir/" target="_blank" class="btn btn-outline">📝 سامانه ثبت‌نام سینا</a>
+                
+    <!-- دکمه ایتا -->
+    <a href="لینک_کانال_ایتا_شما" target="_blank" class="btn btn-eitaa">
+        <img src="eitaa-icon-colorful.svg" class="messenger-icon" alt="ایتا">
+        کانال اطلاع‌رسانی ایتا
+    </a>
+
+    <!-- دکمه بله -->
+    <a href="لینک_کانال_بله_شما" target="_blank" class="btn btn-bale">
+        <img src="bale-color.svg" class="messenger-icon" alt="بله">
+        کانال اطلاع‌رسانی بله
+    </a>
+</div>
+     
     </div>
 
     <div class="grid-container">
