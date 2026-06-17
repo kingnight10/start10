@@ -128,7 +128,29 @@
     object-fit: contain;
 }
         }
+       /* ویدئو آموزشی */
+.video-section{
+    max-width:1100px;
+    margin:60px auto;
+}
 
+.video-frame{
+    position:relative;
+    width:100%;
+    padding-top:56.25%; /* نسبت 16:9 */
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+.video-frame iframe{
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    border:none;
+} 
         .card-icon { font-size: 2.5em; margin-bottom: 15px; }
         .card-title { color: #f8fafc; font-size: 1.4em; margin-top: 0; }
         .card-desc { color: #cbd5e1; font-size: 0.95em; min-height: 80px; }
@@ -253,6 +275,26 @@
         </div>
     </div>
 </div>
+    <!-- بخش ویدئو آموزشی -->
+<div class="video-section">
+    
+    <div class="glass-card">
+        <div class="card-icon">🎬</div>
+        <h2 class="card-title">ویدئوی راهنمای استفاده از سامانه</h2>
+        <p class="card-desc">
+        در این ویدئو نحوه ثبت‌نام در سامانه سینا و استفاده از تسهیلات بنیاد ملی نخبگان توضیح داده شده است.
+        </p>
+
+        <div class="video-frame">
+            <iframe 
+            src="<div id="43589417150"><script type="text/JavaScript" src="https://www.aparat.com/embed/iki4y63?data[rnddiv]=43589417150&data[responsive]=yes&muted=true"></script></div>"
+            allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+</div>
  <!-- بخش دکمه‌های پیام‌رسان اصلاح شده -->
     <div class="footer-actions">
         <a href="https://eitaa.com/markazibmn" target="_blank" class="btn-messenger btn-eitaa-glass">
@@ -266,7 +308,7 @@
         </a>
 
         <a href="https://www.aparat.com/Markazibmn" target="_blank" class="btn-messenger btn-aparat-glass">
-<img src="https://raw.githubusercontent.com/kingnight10/start10/blob/main/assets/logo--color-white.svg" class="Aparat">
+<img src="https://raw.githubusercontent.com/kingnight10/start10/main/assets/logo--color-white.svg" class="Aparat">
 کانال آپارات بنیاد استان مرکزی
 
         </a>
