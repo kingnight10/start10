@@ -104,30 +104,53 @@
         .glass-card::before {
             content: ""; position: absolute; top: 0; right: 0; width: 50px; height: 50px;
             background: var(--primary); filter: blur(50px); opacity: 0.5;
-        /* استایل اختصاصی دکمه‌های پیام‌رسان */
-.btn-eitaa {
-    background: #f38121; /* رنگ سازمانی ایتا */
-    color: #fff !important;
-}
-.btn-eitaa:hover {
-    background: #d96f1a;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(243, 129, 33, 0.3);
-}
-
-.btn-bale {
-    background: linear-gradient(135deg, #2cb5a0, #3c65a3); /* گرادینت مشابه لوگوی بله */
-    color: #fff !important;
-}
-.btn-bale:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(44, 181, 160, 0.3);
+      /* بخش دکمه‌های انتهای صفحه */
+.footer-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 60px;
+    padding-bottom: 40px;
+    flex-wrap: wrap;
 }
 
-.messenger-icon {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
+/* استایل پایه مشابه تصویر ارسالی */
+.btn-messenger {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px; /* ایجاد حالت کپسولی کاملا گرد مشابه تصویر */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.95em;
+}
+
+/* افکت هوور برای ایتا */
+.btn-eitaa-glass:hover {
+    background: #f38121;
+    border-color: #f38121;
+    box-shadow: 0 0 20px rgba(243, 129, 33, 0.4);
+    transform: translateY(-5px);
+}
+
+/* افکت هوور برای بله */
+.btn-bale-glass:hover {
+    background: linear-gradient(135deg, #2cb5a0, #3c65a3);
+    border-color: #2cb5a0;
+    box-shadow: 0 0 20px rgba(44, 181, 160, 0.4);
+    transform: translateY(-5px);
+}
+
+.messenger-icon-small {
+    width: 22px; /* اندازه بهینه برای لوگو داخل دکمه */
+    height: 22px;
+    object-fit: contain;
 }
         }
 
@@ -224,7 +247,17 @@
         </div>
     </div>
 </div>
+<div class="footer-actions">
+        <a href="لینک_کانال_ایتا" target="_blank" class="btn-messenger btn-eitaa-glass">
+            <img src="eitaa-icon-colorful.svg" class="messenger-icon-small" alt="Eitaa">
+            عضویت در کانال ایتا بنیاد
+        </a>
 
+        <a href="لینک_کانال_بله" target="_blank" class="btn-messenger btn-bale-glass">
+            <img src="bale-color.svg" class="messenger-icon-small" alt="Bale">
+            عضویت در کانال بله بنیاد
+        </a>
+    </div>
 <!-- ساختار درگاه شناور (Modal) -->
 <div id="detailsModal" class="modal">
     <div class="modal-content">
