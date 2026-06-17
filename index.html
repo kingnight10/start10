@@ -129,27 +129,50 @@
 }
         }
        /* ویدئو آموزشی */
-.video-section{
-    max-width:1100px;
-    margin:160px auto 80px auto;
-}
-.video-frame{
-    position:relative;
-    width:100%;
-    padding-top:56.25%; /* نسبت 16:9 */
-    border-radius:18px;
-    overflow:hidden;
-    border:1px solid rgba(255,255,255,0.15);
+/* تنظیمات اصلاح شده ویدئو آموزشی */
+.video-section {
+    max-width: 1100px;
+    margin: 120px auto 80px auto; /* فاصله ۱۲۰ پیکسلی از کارت‌های بالایی */
 }
 
-.video-frame iframe{
-    position:absolute;
-    top:0;
-    right:0;
-    width:100%;
-    height:100%;
-    border:none;
-} 
+.video-card {
+    padding: 45px 40px !important; /* ایجاد فضای تنفس داخلی بیشتر */
+}
+
+.video-card .card-icon {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.video-card .card-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.video-card .card-desc {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.video-frame {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* نسبت تصویر ۱۶:۹ */
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.video-frame iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
         .card-icon { font-size: 2.5em; margin-bottom: 15px; }
         .card-title { color: #f8fafc; font-size: 1.4em; margin-top: 0; }
         .card-desc { color: #cbd5e1; font-size: 0.95em; min-height: 80px; }
@@ -274,22 +297,23 @@
         </div>
     </div>
 </div>
-    <!-- بخش ویدئو آموزشی -->
+  <!-- بخش ویدئو آموزشی اصلاح شده -->
 <div class="video-section">
-    
-    <div class="glass-card">
+    <div class="glass-card video-card">
         <div class="card-icon">🎬</div>
         <h2 class="card-title">ویدئوی راهنمای استفاده از سامانه</h2>
         <p class="card-desc">
-        در این ویدئو نحوه ثبت‌نام در سامانه سینا و استفاده از تسهیلات بنیاد ملی نخبگان توضیح داده شده است.
+            در این ویدئو نحوه ثبت‌نام در سامانه سینا و استفاده از تسهیلات بنیاد ملی نخبگان به صورت گام‌به‌گام توضیح داده شده است.
         </p>
 
         <div class="video-frame">
-<iframe
-src="https://www.aparat.com/video/video/embed/videohash/iki4y63/vt/frame"
-allowfullscreen>
-</iframe>
-</div>
+            <iframe 
+                src="https://www.aparat.com/video/video/embed/videohash/iki4y63/vt/frame" 
+                allowfullscreen="true" 
+                webkitallowfullscreen="true" 
+                mozallowfullscreen="true">
+            </iframe>
+        </div>
     </div>
 </div>
  <!-- بخش دکمه‌های پیام‌رسان اصلاح شده -->
