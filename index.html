@@ -162,6 +162,37 @@
 
         @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes modalFadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        /* --- کد دکمه‌های پیام‌رسان (اینجا اضافه شود) --- */
+.footer-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 60px auto 40px auto;
+    flex-wrap: wrap;
+    max-width: 1100px;
+}
+
+.btn-messenger {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-eitaa-glass:hover { background:#f38121; }
+.btn-bale-glass:hover { background:linear-gradient(135deg,#2cb5a0,#3c65a3); }
+.btn-aparat-glass:hover { background:#ed145b; }
+
+.messenger-icon-small {
+    width:24px;
+    height:24px;
+}
     </style>
 </head>
 <body>
@@ -222,19 +253,21 @@
         </div>
     </div>
 </div>
-<div class="footer-actions">
+ <!-- بخش دکمه‌های پیام‌رسان اصلاح شده -->
+    <div class="footer-actions">
         <a href="https://eitaa.com/markazibmn" target="_blank" class="btn-messenger btn-eitaa-glass">
-            <img src="https://github.com/kingnight10/start10/blob/main/assets/eitaa-icon-colorful.svg" class="messenger-icon-small" alt="Eitaa">
-            عضویت در کانال ایتا بنیاد
+            <img src="https://raw.githubusercontent.com/kingnight10/start10/main/assets/eitaa-icon-colorful.svg" class="messenger-icon-small" alt="Eitaa">
+            کانال ایتا بنیاد
         </a>
 
         <a href="http://ble.ir/markazibmn" target="_blank" class="btn-messenger btn-bale-glass">
-            <img src="https://github.com/kingnight10/start10/blob/main/assets/bale-color.svg" class="messenger-icon-small" alt="Bale">
-            عضویت در کانال بله بنیاد
+            <img src="https://raw.githubusercontent.com/kingnight10/start10/main/assets/bale-color.svg" class="messenger-icon-small" alt="Bale">
+            کانال بله بنیاد
         </a>
-    <a href="https://www.aparat.com/Markazibmn" target="_blank" class="btn-messenger btn-bale-glass">
-            <img src="https://github.com/kingnight10/start10/blob/main/assets/logo--color-white%40128px.png" class="messenger-icon-small" alt="Aparat">
-            عضویت در کانال آپارات بنیاد
+
+        <a href="https://www.aparat.com/Markazibmn" target="_blank" class="btn-messenger btn-aparat-glass">
+            <img src="https://raw.githubusercontent.com/kingnight10/start10/main/assets/logo--color-white%40128px.png" class="messenger-icon-small" alt="Aparat">
+            آپارات بنیاد
         </a>
     </div>
 <!-- ساختار درگاه شناور (Modal) -->
