@@ -999,8 +999,8 @@ const FOUNDATION_CONTEXT = `
 // --- State ---
 let chatConfig = {
   provider: localStorage.getItem('chat_provider') || 'gemini',
-  apiKey: localStorage.getItem('chat_api_key') || ''
-    model: localStorage.getItem('chat_model') || 'openai/gpt-oss-20b' 
+  apiKey: localStorage.getItem('chat_api_key') || '',
+  model: localStorage.getItem('chat_model') || 'openai/gpt-oss-20b'
 };
 let chatHistory = [];
 let isChatOpen = false;
@@ -1027,11 +1027,17 @@ document.getElementById('ai-chat-btn').addEventListener('click', toggleChat);
 // --- Save Config ---
 function saveApiConfig() {
   chatConfig.provider = document.getElementById('api-provider-select').value;
-  chatConfig.apiKey   = document.getElementById('api-key-input').value.trim();
-    chatConfig.model = document.getElementById('model-select').value;
+  chatConfig.apiKey = document.getElementById('api-key-input').value.trim();
+
+  const modelEl = document.getElementById('model-select');
+  if (modelEl) {
+    chatConfig.model = modelEl.value;
     localStorage.setItem('chat_model', chatConfig.model);
+  }
+
   localStorage.setItem('chat_provider', chatConfig.provider);
-  localStorage.setItem('chat_api_key',  chatConfig.apiKey);
+  localStorage.setItem('chat_api_key', chatConfig.apiKey);
+}
   const btn = document.getElementById('save-api-btn');
   btn.textContent = '✓ ذخیره شد';
   btn.style.color = '#43e97b';
