@@ -1000,6 +1000,7 @@ const FOUNDATION_CONTEXT = `
 let chatConfig = {
   provider: localStorage.getItem('chat_provider') || 'gemini',
   apiKey: localStorage.getItem('chat_api_key') || ''
+    model: localStorage.getItem('chat_model') || 'openai/gpt-oss-20b' 
 };
 let chatHistory = [];
 let isChatOpen = false;
@@ -1027,6 +1028,8 @@ document.getElementById('ai-chat-btn').addEventListener('click', toggleChat);
 function saveApiConfig() {
   chatConfig.provider = document.getElementById('api-provider-select').value;
   chatConfig.apiKey   = document.getElementById('api-key-input').value.trim();
+    chatConfig.model = document.getElementById('model-select').value;
+    localStorage.setItem('chat_model', chatConfig.model);
   localStorage.setItem('chat_provider', chatConfig.provider);
   localStorage.setItem('chat_api_key',  chatConfig.apiKey);
   const btn = document.getElementById('save-api-btn');
@@ -1142,9 +1145,8 @@ async function callAI(userMessage) {
 
   } else if (provider === 'openrouter') {
     const url = 'https://openrouter.ai/api/v1/chat/completions';
-
     const body = {
-      model: 'openai/gpt-oss-120b',
+     model: chatConfig.model || 'openai/gpt-oss-20b',
       messages: [
         { role: 'system', content: systemPrompt },
         ...messages
