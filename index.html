@@ -122,7 +122,13 @@
     box-shadow: 0 0 20px rgba(44, 181, 160, 0.4);
     transform: translateY(-5px);
 }
-
+/* افکت هوور برای آپارات */
+.btn-bale-glass:hover {
+    background: linear-gradient(135deg, #2cb5a0, #3c65a3);
+    border-color: #2cb5a0;
+    box-shadow: 0 0 20px rgba(44, 181, 160, 0.4);
+    transform: translateY(-5px);
+}
 .messenger-icon-small {
     width: 22px; /* اندازه بهینه برای لوگو داخل دکمه */
     height: 22px;
@@ -133,7 +139,7 @@
 /* تنظیمات اصلاح شده ویدئو آموزشی */
 .video-section {
     max-width: 700px;
-    margin: 70px auto 50px auto; /* فاصله ۱۲۰ پیکسلی از کارت‌های بالایی */
+    margin: 120px auto 50px auto; /* فاصله ۱۲۰ پیکسلی از کارت‌های بالایی */
 }
 
 .video-card {
@@ -259,13 +265,6 @@
     will-change: transform;
 }
 
-.animated-bg span:nth-child(1) {
-    width: 320px;
-    height: 320px;
-    background: radial-gradient(circle, rgba(34,197,94,0.95), rgba(34,197,94,0.05));
-    top: 8%;
-    left: 5%;
-}
 
 .animated-bg span:nth-child(2) {
     width: 240px;
@@ -354,7 +353,15 @@
     z-index: 0;
     pointer-events: none;
 }
-
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(96,165,250,0.9), rgba(96,165,250,0.15) 55%, transparent 72%);
+    box-shadow: 0 0 18px rgba(96,165,250,0.35);
+    opacity: 0.75;
+    animation: float 10s ease-in-out infinite alternate, fadeOut 8s ease-in-out infinite;
+    will-change: transform, opacity;
+}
 
 @keyframes float {
     from {
