@@ -824,9 +824,10 @@
 
   <div id="chat-config">
     <select id="api-provider-select">
-      <option value="gemini">Gemini (رایگان)</option>
+      <option value="gemini">Gemini </option>
       <option value="openai">OpenAI / GPT</option>
       <option value="deepseek">DeepSeek</option>
+    <option value="openrouter">OpenRouter</option>
     </select>
     <input id="api-key-input" type="password" placeholder="API Key را وارد کنید" />
     <button id="save-api-btn" onclick="saveApiConfig()">ذخیره</button>
@@ -1119,7 +1120,38 @@ async function callAI(userMessage) {
     const data = await res.json();
     return data.choices?.[0]?.message?.content || 'پاسخی دریافت نشد.';
 
-  } else if (provider === 'deepseek') {
+  }} else if (provider === 'openrouter') {
+    const url = 'https://openrouter.ai/api/v1/chat/completions';
+    const body = {
+      model: 'deepseek/deepseek-r1:free',
+      messages: [
+        { role: 'system', content: systemPrompt },
+        ...messages
+      ],
+      max_tokens: 800,
+      temperature: 0.3
+    };
+
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+        'HTTP-Referer': window.location.href,
+        'X-Title': 'GapGPT Academic Chat'
+      },
+      body: JSON.stringify(body)
+    });
+
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err?.error?.message || `خطای OpenRouter: ${res.status}`);
+    }
+
+    const data = await res.json();
+    return data.choices?.[0]?.message?.content || 'پاسخی دریافت نشد.';
+     };
+  else if (provider === 'deepseek') {
     const url = 'https://api.deepseek.com/chat/completions';
     const body = {
       model: 'deepseek-chat',
