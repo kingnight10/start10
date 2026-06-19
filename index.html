@@ -312,12 +312,6 @@
     position: relative;
     z-index: 2;
 }
-
-
-.container {
-    position: relative;
-    z-index: 2;
-}
       /* Loading Screen */
 .loading-screen {
     position: fixed;
@@ -422,7 +416,7 @@ function createParticles() {
     const bg = document.querySelector('.animated-bg');
     if (!bg) return;
 
-    const particleCount = 50;
+    const particleCount = 100;
 
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
@@ -431,7 +425,7 @@ function createParticles() {
         const size = Math.random() * 8 + 3; // 3px تا 11px
         const left = Math.random() * 100;
         const top = Math.random() * 100;
-        const duration = Math.random() * 8 + 6; // 6s تا 14s
+        const duration = Math.random() * 15 + 10; // 6s تا 14s
         const delay = Math.random() * 5;
         const blur = Math.random() * 2;
 
