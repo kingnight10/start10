@@ -535,8 +535,15 @@
             box-shadow:
                 0 20px 60px rgba(0,0,0,0.5),
                 0 0 0 1px rgba(0,242,254,0.2),
-                inset 0 1px 0 rgba(255,255,255,0.1);
-        }
+               inset 0 1px 0 rgba(255,255,255,0.1);
+            
+  .glass-card-large {
+  min-height: 420px;
+  grid-column: span 2;
+  box-shadow: 0 20px 45px rgba(0,0,0,.18);
+}
+
+
 
         /* glint line at top */
         .glass-card::after {
@@ -892,7 +899,7 @@
         </div>
 
         <!-- آموزش‌یار و پژوهش‌یار -->
-        <div class="glass-card" data-tilt>
+        <div class="glass-card-large" data-tilt>
             <span class="card-badge">🔬 ویژه دکتری</span>
             <div class="card-icon">🔬</div>
             <h2 class="card-title">آموزش‌یار و پژوهش‌یار</h2>
