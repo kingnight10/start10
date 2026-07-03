@@ -507,6 +507,10 @@
             animation: cardReveal 0.7s ease forwards;
         }
 
+    
+        .glass-card.large {
+        grid-column: span 2;
+    }
         /* staggered card entry */
         .glass-card:nth-child(1) { animation-delay: 0.1s; }
         .glass-card:nth-child(2) { animation-delay: 0.2s; }
@@ -537,14 +541,6 @@
                 0 0 0 1px rgba(0,242,254,0.2),
                inset 0 1px 0 rgba(255,255,255,0.1);
             
-  .glass-card-large {
-  min-height: 420px;
-  grid-column: span 2;
-  box-shadow: 0 20px 45px rgba(0,0,0,.18);
-}
-
-
-
         /* glint line at top */
         .glass-card::after {
             content:'';
